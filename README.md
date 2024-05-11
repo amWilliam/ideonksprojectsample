@@ -1,13 +1,16 @@
+# Fibonacci
 def fibonacci(n):
     """Generate Fibonacci series up to n terms."""
     fib_series = [0, 1]
     while fib_series[-1] + fib_series[-2] <= n:
         fib_series.append(fib_series[-1] + fib_series[-2])
     return fib_series
-
+    
+# Import
 import unittest
 from fibonacci_generator import fibonacci
 
+# Classification
 class TestFibonacci(unittest.TestCase):
     def test_fibonacci(self):
         self.assertEqual(fibonacci(5), [0, 1, 1, 2, 3, 5])
@@ -15,7 +18,8 @@ class TestFibonacci(unittest.TestCase):
         self.assertEqual(fibonacci(50), [0, 1, 1, 2, 3, 5, 8, 13, 21, 34])
         self.assertEqual(fibonacci(100), [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89])
         self.assertEqual(fibonacci(1000), [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987])
-
+        
+# If function
 if __name__ == '__main__':
     unittest.main()
 
